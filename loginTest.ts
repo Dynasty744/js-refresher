@@ -28,7 +28,7 @@ test.describe('Login Page Test', () => {
     loginPage = new LoginPage(page);
   })
 
-  test.beforeeach(async () => {
+  test.beforeEach(async () => {
     await page.goto('https://example.com/login');
   })
 
@@ -36,7 +36,7 @@ test.describe('Login Page Test', () => {
     await loginPage.login('validUsername', 'validPassword');
 
     const successMessage = await page.locator('.success-message').innerText();
-    expect(successMessage).toBe('Login sucessful');
+    expect(successMessage).toBe('Login successful');
   })
 
   test('Invalid Login Test', async () => {
